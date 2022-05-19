@@ -70,4 +70,14 @@ abstract class ListOfAs[A] {
 
   def groupMap[K, B](key: (A) => K)(f: (A) => B): Map[K, List[B]]
   // Partitions this list into a map of lists according to a discriminator function key.
+
+  def scan[B >: A](z: B)(op: (B, B) => B): List[B]
+  // Computes a prefix scan of the elements of the collection.
+
+  def scanLeft[B](z: B)(op: (B, A) => B): List[B]
+  // Produces a list containing cumulative results of applying the operator going left to right, including the initial value.
+
+  def scanRight[B](z: B)(op: (A, B) => B): List[B]
+  // Produces a collection containing cumulative results of applying the operator going right to left.
+
 }

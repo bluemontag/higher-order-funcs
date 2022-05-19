@@ -9,6 +9,9 @@ object Currying extends App {
   val two1 = successorWithParam(1)
   val two2 = successorLambda(1)
 
+  println(s"Two1=$two1")
+  println(s"Two2=$two2")
+
   def functionName(param1: Int, param2: String): String = {
     "Param1=" + param1.toString + ", Param2=" + param2
   }
