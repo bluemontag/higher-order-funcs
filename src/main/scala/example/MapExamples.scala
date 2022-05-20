@@ -14,4 +14,12 @@ object MapExamples extends App {
   val flattMapped = list2.flatMap(elem => List(elem) )
 
   println(flattMapped) // and here?
+
+
+  val forVal = for {
+    elem <- list2
+    char <- elem
+  } yield char
+
+  println(forVal)
 }
