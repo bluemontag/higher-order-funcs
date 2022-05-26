@@ -10,7 +10,7 @@ object UrlBuilder extends App {
 
   val domainName = "www.example.com"
 
-  def getURL = urlBuilder(ssl = true, domainName)
+  def getURL: (String, String) => String = urlBuilder(ssl = true, domainName)
 
   val endpoint = "users"
   val query = "id=1"

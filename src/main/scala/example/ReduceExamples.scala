@@ -7,6 +7,6 @@ object ReduceExamples extends App {
 
   println(res)
 
-//  val empty: List[String] = List()
-//  empty.reduce((res, elem) => res + ", " + elem) // Exception in thread "main" java.lang.UnsupportedOperationException: empty.reduceLeft
+  val empty: List[String] = List()
+  empty.reduce((res, elem) => res + ", " + elem) // Exception in thread "main" java.lang.UnsupportedOperationException: empty.reduceLeft
 }

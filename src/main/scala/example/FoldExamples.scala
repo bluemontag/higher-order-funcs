@@ -15,7 +15,7 @@ object FoldExamples extends App {
   val numbers: List[String] = List("123", "342", "1000")
 
   val + = (acc: Int, elem: String) => acc + elem.length
-  val numbers2: Int = numbers.foldLeft(0)( + )
+//  val numbers2: Int = numbers.foldLeft(0)( + )
 
 
   // List("123", "342", "1000").foldLeft(0)(+) => ((0 + 3) + 3) + 4
@@ -41,5 +41,5 @@ object FoldExamples extends App {
   // Folding left:   ((0 + 2^2) + 2^3) + 2^4
   // Folding right:  2^2+ (2^3 + (2^4 + 0))
 
-  println(powersSum2)
+  println(List(2,3,4).fold(0)((a:Int, b:Int) => a + b))
 }
